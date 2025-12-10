@@ -28,12 +28,94 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            txtTelegrama = new TextBox();
+            label1 = new Label();
+            chkUrgente = new CheckBox();
+            label2 = new Label();
+            txtPrecio = new TextBox();
+            btnCalcularPrecio = new Button();
+            SuspendLayout();
+            // 
+            // txtTelegrama
+            // 
+            txtTelegrama.Location = new Point(32, 49);
+            txtTelegrama.Multiline = true;
+            txtTelegrama.Name = "txtTelegrama";
+            txtTelegrama.Size = new Size(416, 124);
+            txtTelegrama.TabIndex = 0;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(32, 21);
+            label1.Name = "label1";
+            label1.Size = new Size(42, 15);
+            label1.TabIndex = 1;
+            label1.Text = "Texto:";
+            // 
+            // chkUrgente
+            // 
+            chkUrgente.AutoSize = true;
+            chkUrgente.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            chkUrgente.Location = new Point(32, 197);
+            chkUrgente.Name = "chkUrgente";
+            chkUrgente.Size = new Size(78, 19);
+            chkUrgente.TabIndex = 2;
+            chkUrgente.Text = "Urgente?";
+            chkUrgente.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(32, 249);
+            label2.Name = "label2";
+            label2.Size = new Size(41, 15);
+            label2.TabIndex = 3;
+            label2.Text = "Coste:";
+            // 
+            // txtPrecio
+            // 
+            txtPrecio.Location = new Point(93, 247);
+            txtPrecio.Name = "txtPrecio";
+            txtPrecio.Size = new Size(214, 23);
+            txtPrecio.TabIndex = 4;
+            // 
+            // btnCalcularPrecio
+            // 
+            btnCalcularPrecio.Location = new Point(326, 234);
+            btnCalcularPrecio.Name = "btnCalcularPrecio";
+            btnCalcularPrecio.Size = new Size(122, 36);
+            btnCalcularPrecio.TabIndex = 5;
+            btnCalcularPrecio.Text = "Calcular";
+            btnCalcularPrecio.UseVisualStyleBackColor = true;
+            btnCalcularPrecio.Click += btnCalcularPrecio_Click;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(508, 303);
+            Controls.Add(btnCalcularPrecio);
+            Controls.Add(txtPrecio);
+            Controls.Add(label2);
+            Controls.Add(chkUrgente);
+            Controls.Add(label1);
+            Controls.Add(txtTelegrama);
+            Name = "Form1";
+            Text = "Form1";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private TextBox txtTelegrama;
+        private Label label1;
+        private CheckBox chkUrgente;
+        private Label label2;
+        private TextBox txtPrecio;
+        private Button btnCalcularPrecio;
     }
 }
